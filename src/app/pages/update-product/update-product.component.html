@@ -1,0 +1,49 @@
+<div>
+       <form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+           <tr *ngFor="let product of products | async">
+        <h3>ID</h3>
+        <h4>Current Value: {{product.id}}</h4>
+        <mat-form-field>
+            <input matInput type="text" formControlName="id" value={{product.id}}/>
+        </mat-form-field>
+        <br>
+        <h3>Img_url</h3>
+        <h4>Current Value: {{product.Img_url}}</h4>
+        <mat-form-field>
+            <input matInput type="text" formControlName="Img_url" value={{product.Img_url}} />
+        </mat-form-field>
+        <br>
+        <h3>Name</h3>
+        <h4>Current Value: {{product.Name}}</h4>
+        <mat-form-field>
+            <input matInput type="text" formControlName="Name" />
+        </mat-form-field>
+        <br>
+        <h3>Available Pieces</h3>
+        <h4>Current Value: {{product.availablePieces}}</h4>
+        <mat-form-field>
+            <input matInput type="text" formControlName="availablePieces" />
+        </mat-form-field>
+        <br>
+        <h3>Price (£)</h3>
+        <h4>Current Value: {{product.price}}</h4>
+        <mat-form-field>
+            <input matInput type="number" formControlName="price"/>
+        </mat-form-field>
+        <br>
+        <h3>Type</h3>
+        <h4>Current Value: {{product.type}}</h4>
+        <mat-form-field>
+            <mat-select formControlName="type">
+                <mat-option value="baits">Baits</mat-option>
+                <mat-option value="rod" >Rod</mat-option>
+                <mat-option value="reels">Reels</mat-option>
+                <mat-option value="others">Others</mat-option>
+            </mat-select>    
+        </mat-form-field>
+        <br>
+        <span><button mat-raised-button color="primary" type="submit">Update</button></span>
+        <span><button mat-raised-button color="primary" (click)="goBack()">Back</button></span>
+    </tr>
+    </form> 
+</div>

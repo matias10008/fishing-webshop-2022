@@ -1,0 +1,15 @@
+a {
+    text-decoration: none;
+    color:whitesmoke;
+}
+a:hover, a:active{
+    color:lightslategray;
+}
+.nav-items{
+    list-style: none;
+    padding: 5;
+    margin: 0;
+}
+mat-sidenav{
+    width: 200px;
+}

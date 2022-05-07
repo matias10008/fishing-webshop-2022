@@ -1,0 +1,28 @@
+Ebben a fájlban szeretnék segítséget nyújtani, mit merre találsz, hogy ne húzzam feleslegesen a drága idődet!
+
+- Adatmodell definiálása:(app/shared/models) mappában találod a 3 megvalósított adatmodellt.
+- Legalább 2 különböző attribútum direktíva használata: (app/shared/menu.component.ts) Alapvetően több helyen is használtam mind attribútum mind 
+	struktúrális direktívát.
+- Legalább 2 különböző strukturális direktíva használata:(app/pages/baits/baits.component.html) *ngFor segítéségével listázom megjelenítendő elemeket.
+- Adatátadás szülő és gyermek komponensek között (app/shared/menu.component.ts)
+- Legalább 10 különböző Material elem helyes használata.(app/pages/main/main.component.html) A webshop folyamán számtalan helyen használtam a @angular/material
+	könyvtár elemeit. Lásd még -> Menü, Regisztráció, Kosár.
+- Adatbevitel Angular form-ok segítségével megvalósítva (app/pages/signup/signupcomponent.ts illetve signupcomponent.html) 
+	Emellett a kosár oldalán is form segítségével adtam át az adatokat, illetve az árucikk módosítása is avval történt meg.(app/pages/update-product)
+- Legalább 1 saját Pipe osztály írása és használata (app/shared/pipes) Itt találod a megírt osztály, használni pedig, az admin oldalon használtam, amikor 
+	a rendelések dátumát jeleztem ki. (app/pages/admin/admin.component.html 65.sor)
+- Legalább 2 különböző Lifecycle Hook használata a teljes projektben: Nem használtam!
+- CRUD műveletek mindegyike megvalósult (Promise, Observable használattal):(app/shared/services/admin.service.ts) Ebben a fájlban megtalálsz párat. 
+	Mindenhol ezt a mintát követtem.
+- CRUD műveletek service-ekbe vannak kiszervezve és megfelelő módon injektálva lettek (app/shared/services/admin.service.ts) Szintén ezt a fájlt ajánlom.
+- Legalább 2 komplex Firestore lekérdezés megvalósítása: (app/pages/reels/reels.component.ts) Mivel minden árucikk egy táblában van, így minden oldalon szűrtem,
+	hogy csak a megfelelő "type"-al rendelkezőket lássuk.
+- Legalább 4 különböző route a különböző oldalak eléréséhez: (app/app-routing.module.ts) Itt mindent megtalálsz, kicsit több mint négy van! :D
+- Legalább 2 route levédése azonosítással: (app/app-routing.module.ts) Szintén itt találod a levédett útvonalakat.
+
+Remélem evvel a kis segítséggel tudtam neked időt spórolni! Illetve köszönöm, hogy lepontoztad a projektem!
+
+
+
+
+

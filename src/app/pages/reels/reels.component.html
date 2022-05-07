@@ -1,0 +1,29 @@
+<div class="reel_component">
+    <h3>A fishing reel is a hand-cranked reel used in fishing to wind and stow fishing line,[1] typical mounted to a fishing rod, but may also be used to retrieve a tethered arrow when bowfishing.
+        Modern recreational fishing reels usually have fittings aiding in casting for distance and accuracy, as well as controlling the speed and tension of line retrieval to avoid line snap and hook dislodgement. 
+        Fishing reels are traditionally used in angling and competitive casting. They are typically attached near the handle of a fishing rod, though some specialized reels with pressure sensors for immediate retrieval are equipped on downrigger systems which are mounted directly to an ocean-going sport boat's gunwales or transoms and are used for "deep drop" and trolling.
+    </h3>
+    <br>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Picture</th>
+                <th>Name</th>
+                <th>AvailablePieces</th>
+                <th>Price (£)</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="text" *ngFor="let item of items | async">
+                <td><img src={{item.Img_url}} height=200 width=200></td>
+                <td>{{item.Name}}</td>
+                <td>{{item.availablePieces}}</td>
+                <td>{{item.price}}</td>
+                <td><a href="http://www.google.com/search?q={{item.Name}}">Link</a></td>
+                <td><button mat-raised-button color="primary" (click)="addtoCart(item.Name,item.price)">Add to Cart</button></td>
+            </tr> 
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,24 @@
+div{
+    display: flex;
+}
+.cart_component{
+    display: flex;
+    text-align: center;
+    height: 100vh;   
+}
+.mat-icon{
+    vertical-align: middle;  
+}
+span{
+    padding: 0px 10px 10px 10px;
+}
+td,th{
+    height: 8%;
+}
+form {
+    display: inline-grid ;
+    width: 40%;
+    height: 10%;
+    align-self: center;
+}
+

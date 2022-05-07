@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fishing-webshop-2022": {
+      "hosting": {
+        "Fishing-Webshop-By-VargaM": [
+          "fishing-webshop-2022"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fishing-webshop-2022"
+  }
+}

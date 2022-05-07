@@ -1,0 +1,71 @@
+<div class="admin_component">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>AvailablePieces</th>
+                <th>Price (£)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="text" *ngFor="let product of products | async">
+                <td>{{product.Name}}</td>
+                    <td>{{product.availablePieces}}</td>
+                <td>{{product.price}}</td>
+                <td><button mat-raised-button color="primary" (click)="updateProduct(product.id)">Update</button></td>
+                <td><button mat-raised-button color="primary" (click)="deleteProduct(product.id)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <h1 style="text-align:center;"> Add new Product!</h1>
+    <form [formGroup]="newProductForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <mat-label for="Img_url">Image Url: </mat-label>
+            <input matInput type="text" formControlName="Img_url" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label for="Name">Name: </mat-label>
+            <input matInput type="text" formControlName="Name" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label for="availablePieces">AvailablePieces: </mat-label>
+            <input matInput type="text" formControlName="availablePieces" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label for="price">Price: </mat-label>
+            <input matInput type="number" formControlName="price" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label for="type">Type: </mat-label>
+            <mat-select formControlName="type">
+                <mat-option value="baits">Baits</mat-option>
+                <mat-option value="rod" >Rod</mat-option>
+                <mat-option value="reels">Reels</mat-option>
+                <mat-option value="others">Others</mat-option>
+            </mat-select>    
+        </mat-form-field>
+        <br>
+        <span><button mat-raised-button color="primary" type="submit">Add</button></span>
+    </form>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Buyer</th>
+                <th>Address</th>
+                <th>Date</th>
+                <th>Price (£)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="text" *ngFor="let order of orders | async">
+                <td>{{order.buyer}}</td>
+                <td>{{order.address}}</td>
+                <td>{{order.date | dateFormat}}</td>
+                <td>{{order.price}}</td>
+                <td><button mat-raised-button color="primary" (click)="deleteOrder(order.id)">Deliver</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

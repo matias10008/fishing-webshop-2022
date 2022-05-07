@@ -1,0 +1,32 @@
+<div class="baits_component">
+    <h3>Fishing bait is any substance used to attract and catch fish, e.g. on the end of a fishing hook, or inside a fish trap.
+        Traditionally, nightcrawlers, insects, worms and smaller bait fish have been used for this purpose.
+        Fishermen have also begun using plastic bait and more recently, electronic lures to attract fish.
+        Studies show that natural baits like croaker and shrimp are more recognized by the fish and are more readily accepted.
+        Which of the various techniques a fisher may choose is dictated mainly by the target species and by its habitat.
+        Bait can be separated into two main categories: artificial baits and natural baits.
+    </h3>
+    <br>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Picture</th>
+                <th>Name</th>
+                <th>AvailablePieces</th>
+                <th>Price (£)</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="text" *ngFor="let item of items | async">
+                <td><img src={{item.Img_url}} height=200 width=200></td>
+                <td>{{item.Name}}</td>
+                <td>{{item.availablePieces}}</td>
+                <td>{{item.price}}</td>
+                <td><a href="http://www.google.com/search?q={{item.Name}}">Link</a></td>
+                <td><button mat-raised-button color="primary" (click)="addtoCart(item.Name,item.price)">Add to Cart</button></td>
+            </tr> 
+        </tbody>
+    </table>
+</div>
