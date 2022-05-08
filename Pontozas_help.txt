@@ -11,7 +11,7 @@ Ebben a fájlban szeretnék segítséget nyújtani, mit merre találsz, hogy ne 
 	Emellett a kosár oldalán is form segítségével adtam át az adatokat, illetve az árucikk módosítása is avval történt meg.(app/pages/update-product)
 - Legalább 1 saját Pipe osztály írása és használata (app/shared/pipes) Itt találod a megírt osztály, használni pedig, az admin oldalon használtam, amikor 
 	a rendelések dátumát jeleztem ki. (app/pages/admin/admin.component.html 65.sor)
-- Legalább 2 különböző Lifecycle Hook használata a teljes projektben: Nem használtam!
+- Legalább 2 különböző Lifecycle Hook használata a teljes projektben:(app/pages/login/login.component.ts) Itt használtam ngOnDestroy-t.
 - CRUD műveletek mindegyike megvalósult (Promise, Observable használattal):(app/shared/services/admin.service.ts) Ebben a fájlban megtalálsz párat. 
 	Mindenhol ezt a mintát követtem.
 - CRUD műveletek service-ekbe vannak kiszervezve és megfelelő módon injektálva lettek (app/shared/services/admin.service.ts) Szintén ezt a fájlt ajánlom.
